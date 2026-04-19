@@ -1,84 +1,256 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>リボポイ活の完全ガイド</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.6; margin: 40px; }
-    h1 { color: #2c3e50; }
-    h2 { color: #34495e; border-bottom: 2px solid #ccc; }
-    .warning { background: #ffe6e6; padding: 10px; }
-    .good { background: #e6ffe6; padding: 10px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リボポイ活ガイド</title>
+
+<style>
+:root {
+  --main: #4f46e5;
+  --bg: #f9fafb;
+  --text: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ヘッダー */
+header {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ヒーロー */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+/* コンテナ */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* カード */
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 見出し */
+h2 {
+  margin-top: 0;
+  border-left: 4px solid var(--main);
+  padding-left: 10px;
+}
+
+/* グリッド */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.good {
+  background: #ecfdf5;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.bad {
+  background: #fef2f2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 手順 */
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* 注意 */
+.warning {
+  background: #fff7ed;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid orange;
+}
+
+/* =========================
+   スマホ最適化
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 12px 15px;
+  }
+
+  header h1 {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .card {
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+    padding-left: 8px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+
+}
+</style>
 </head>
+
 <body>
 
-<h1>リボポイ活の考え方と安全なやり方</h1>
+<header>
+  <h1>リボポイ活ガイド</h1>
+</header>
 
-<p>
-リボポイ活とは、クレジットカードのリボ払いを活用して
-ポイント還元を最大化するテクニックです。
-ただし、正しく使わないと損をする可能性もあります。
-</p>
+<section class="hero">
+  <h2>リボポイ活を正しく使って<br>ポイントを最大化する</h2>
+  <p>仕組み・リスク・安全なやり方を分かりやすく解説</p>
+</section>
 
-<h2>■ リボポイ活の仕組み</h2>
-<p>
-通常のカード利用に対して、リボ払い設定を行うことで
-「リボ専用のポイント優遇」を受けることができます。
-</p>
+<div class="container">
 
-<ul>
-  <li>リボ払い設定 → ポイント倍率アップ</li>
-  <li>すぐに繰上げ返済 → 手数料を最小化</li>
-</ul>
+  <div class="card">
+    <h2>リボポイ活とは？</h2>
+    <p>
+      リボ払いの特典を利用しながら、繰上げ返済で手数料を抑えて
+      ポイントだけを効率よく獲得する方法です。
+    </p>
+  </div>
 
-<h2>■ メリット</h2>
-<div class="good">
-<ul>
-  <li>ポイント還元率が上がる</li>
-  <li>キャンペーン対象になりやすい</li>
-</ul>
+  <div class="card">
+    <h2>リボ払いの仕組み（簡単に）</h2>
+    <p>
+      リボ払いとは、毎月の支払額を一定にする支払い方法です。
+      利用金額が増えても、毎月の支払いはほぼ一定になります。
+    </p>
+    <p>
+      その代わり、残高に対して<strong>手数料（利息）が発生する</strong>仕組みです。
+    </p>
+    <ul>
+      <li>支払いは毎月ほぼ一定</li>
+      <li>残高が残ると利息がかかる</li>
+      <li>長く使うほど手数料が増える</li>
+    </ul>
+    <p>
+      そのため、リボポイ活では「すぐに全額返済する」ことが重要になります。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>メリット・デメリット</h2>
+    <div class="grid">
+      <div class="good">
+        <strong>メリット</strong>
+        <ul>
+          <li>ポイント還元率アップ</li>
+          <li>キャンペーン対象</li>
+        </ul>
+      </div>
+      <div class="bad">
+        <strong>デメリット</strong>
+        <ul>
+          <li>手数料リスク</li>
+          <li>管理が必要</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>安全にやるコツ</h2>
+    <ul>
+      <li>すぐに繰上げ返済する</li>
+      <li>利用額を小さくする</li>
+      <li>残高を毎月確認する</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>やり方（3ステップ）</h2>
+    <ol class="steps">
+      <li>カードで買い物</li>
+      <li>リボ払いに変更</li>
+      <li>確定後すぐに全額返済</li>
+    </ol>
+  </div>
+
+  <div class="card warning">
+    <h2>重要な注意点</h2>
+    <p>
+      リボ払いは高金利です。理解せずに使うと損をする可能性があります。
+    </p>
+  </div>
+
 </div>
-
-<h2>■ デメリット</h2>
-<div class="warning">
-<ul>
-  <li>手数料が発生する可能性</li>
-  <li>放置すると借金が増える</li>
-</ul>
-</div>
-
-<h2>■ 安全にやるための考え方</h2>
-<p>
-重要なのは「リボ払いを使うが、利息は払わない」ことです。
-</p>
-
-<ul>
-  <li>利用後すぐに繰上げ返済する</li>
-  <li>毎月の残高を必ず確認する</li>
-  <li>上限金額を低く設定する</li>
-</ul>
-
-<h2>■ 具体的な手順</h2>
-<ol>
-  <li>カードで買い物</li>
-  <li>リボ払いに変更</li>
-  <li>確定後すぐに全額返済</li>
-</ol>
-
-<h2>■ 注意（最重要）</h2>
-<div class="warning">
-<p>
-リボ払いは本来、高い金利がかかる仕組みです。
-理解せずに使うと損をする可能性があります。
-</p>
-</div>
-
-<h2>■ まとめ</h2>
-<p>
-リボポイ活は「仕組みを理解してコントロールできる人」向けの方法です。
-無理に行う必要はありません。
-</p>
 
 </body>
 </html>
